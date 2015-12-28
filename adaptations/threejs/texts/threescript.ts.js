@@ -94,12 +94,12 @@ function loopCallback() {
     */
 }
 
-function renderCallback() {
-   renderer.clear();
+function renderCallback(r, s, c) {
+   r.clear();
    if (postprocessing.enabled) {
       composer.render(0.05);
    } else {
-      renderer.render(s, c);
+      r.render(s, c);
    }
 }
 
